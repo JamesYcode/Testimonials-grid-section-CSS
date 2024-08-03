@@ -1,3 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Poppins:wght@200;400;600;700&display=swap');
+
+:root {
+  /* Primary colors */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Neutral colors */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Fonts */
+  --font-barlow: 'Barlow Semi Condensed', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+  line-height: calc(1em + 0.5rem);
+}
+
+body {
+  font-family: var(--font-barlow);
+  font-size: 13px;
+  background-color: var(--light-grayish-blue);
+}
+
+main {
+  padding: 1rem;
+}
+
+/* Cards Generic styles -- Applies to all cards */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cards {
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+}
+
+.card__name {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.card__name img {
+  border-radius: 180px;
+  width: 3rem;
+  height: 3rem;
+}
+
+.card__name p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--light-grayish-blue);
+}
+
+#verified {
+  opacity: 50%;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.card__testimonials p {
+  color: var(--light-grayish-blue);
+  /* border: 1px solid red; */
+  margin-top: 0.1rem;
+}
+
+.testimonials__1 {
+  font-size: 1.58rem;
+  font-weight: 500;
+}
+
+.testimonials__2 {
+  opacity: 70%;
+  font-size: 0.95rem;
+}
+
+/* Individual cards */
+.card__1 {
+  background-color: var(--moderate-violet);
+  background-image: url('images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-size: auto 120px;
+  background-position: 92.5% 0px;
+}
+
+.card__2 {
+  background-color: var(--dark-grayish-blue);
+}
+.card__3 {
+  background-color: var(--white);
+}
+
+.card__3 p {
+  color: var(--dark-grayish-blue);
+}
+
+.card__4 {
+  background-color: var(--dark-blackish-blue);
+}
+
+.card__5 {
+  background-color: var(--white);
+}
+
+.card__5 p {
+  color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 575px) {
+  main {
+    max-width: 1440px;
+    margin: 5rem auto;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+  }
+
+  .card__1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card__2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
+
+  .card__3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    box-shadow: 0 25px 35px -30px var(--dark-grayish-blue);
+  }
+
+  .card__4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  .card__5 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    box-shadow: 0 25px 35px -30px var(--dark-grayish-blue);
+  }
+}
+
 /* Provided by Frontend Mentor */
 .attribution {
   font-size: 11px;
